@@ -1,0 +1,19 @@
+{
+  "name": "Highland Valley Construction",
+  "short_name": "Highland Valley",
+  "description": "Professional construction services specializing in new builds, remodels, and high-end kitchen and bathroom renovations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8faf9",
+  "theme_color": "#2d5a87",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["construction", "business", "home-improvement"],
+  "lang": "en-US"
+}

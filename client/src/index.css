@@ -1,0 +1,187 @@
+/* Custom Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(210, 11%, 15%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 13%, 34%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 11%, 15%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 11%, 15%);
+  --border: hsl(214, 13%, 90%);
+  --input: hsl(214, 13%, 90%);
+  --primary: hsl(159, 61%, 41%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222, 84%, 11%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(222, 84%, 11%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: hsl(210, 11%, 15%);
+  --radius: 0.5rem;
+  
+  /* Highland Valley Custom Colors */
+  --brand-blue: hsl(210, 55%, 25%);
+  --brand-charcoal: hsl(213, 27%, 24%);
+  --brand-green: hsl(156, 58%, 44%);
+  --brand-green-light: hsl(146, 64%, 47%);
+  --brand-blue-light: hsl(207, 81%, 59%);
+  --brand-grey: hsl(215, 16%, 35%);
+  --brand-light: hsl(210, 40%, 98%);
+  --brand-slate-dark: hsl(215, 25%, 27%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 4%, 16%);
+  --muted-foreground: hsl(240, 5%, 65%);
+  --popover: hsl(240, 10%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 4%, 16%);
+  --input: hsl(240, 4%, 16%);
+  --primary: hsl(159, 61%, 41%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 4%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 4%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 5%, 84%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-display: swap;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .brand-blue {
+    color: hsl(var(--brand-blue));
+  }
+  .bg-brand-blue {
+    background-color: hsl(var(--brand-blue));
+  }
+  .brand-charcoal {
+    color: hsl(var(--brand-charcoal));
+  }
+  .bg-brand-charcoal {
+    background-color: hsl(var(--brand-charcoal));
+  }
+  .brand-green {
+    color: hsl(var(--brand-green));
+  }
+  .bg-brand-green {
+    background-color: hsl(var(--brand-green));
+  }
+  .brand-green-light {
+    color: hsl(var(--brand-green-light));
+  }
+  .bg-brand-green-light {
+    background-color: hsl(var(--brand-green-light));
+  }
+  .brand-blue-light {
+    color: hsl(var(--brand-blue-light));
+  }
+  .bg-brand-blue-light {
+    background-color: hsl(var(--brand-blue-light));
+  }
+  .brand-grey {
+    color: hsl(var(--brand-grey));
+  }
+  .bg-brand-grey {
+    background-color: hsl(var(--brand-grey));
+  }
+  .bg-brand-light {
+    background-color: hsl(var(--brand-light));
+  }
+  .bg-brand-slate-dark {
+    background-color: hsl(var(--brand-slate-dark));
+  }
+  .text-brand-charcoal {
+    color: hsl(var(--brand-charcoal));
+  }
+  .text-brand-grey {
+    color: hsl(var(--brand-grey));
+  }
+  .text-brand-green {
+    color: hsl(var(--brand-green));
+  }
+  .text-brand-blue {
+    color: hsl(var(--brand-blue));
+  }
+  .text-brand-slate-dark {
+    color: hsl(var(--brand-slate-dark));
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(45, 55, 72, 0.7));
+  }
+
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Mobile touch optimizations */
+  @media (max-width: 768px) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    button, a {
+      touch-action: manipulation;
+      min-height: 44px; /* Minimum touch target size */
+      min-width: 44px;
+    }
+    
+    input, select, textarea {
+      font-size: 16px; /* Prevent zoom on iOS */
+    }
+  }
+
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
